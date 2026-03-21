@@ -694,6 +694,8 @@ textarea { resize: vertical; min-height: 100px; }
 .ci-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
 .ci-label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
 .ci-val { font-size: 0.9rem; color: var(--white); margin-top: 0.2rem; }
+.ci-val--link { text-decoration: none; cursor: pointer; transition: color 0.2s; }
+.ci-val--link:hover { color: var(--gold-light); }
 
 .whatsapp-btn {
   display: inline-flex;
@@ -873,7 +875,7 @@ footer {
 
 .vastu-reel-phone {
   position: relative;
-  width: 280px;
+  width: 360px;
   border-radius: 36px;
   border: 2px solid rgba(201,168,76,0.35);
   background: var(--navy2);
@@ -1139,6 +1141,157 @@ footer {
   50% { opacity: 0.4; transform: scale(0.7); }
 }
 
+/* TANTRA FULL SECTION */
+.tantra-section-full {
+  position: relative;
+  min-height: 720px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  background: #070a12;
+}
+
+/* Divine ambient glows */
+.tantra-aura {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+.tantra-aura--1 {
+  width: 500px; height: 500px;
+  right: 5%; top: -10%;
+  background: radial-gradient(circle, rgba(120,40,140,0.18) 0%, transparent 70%);
+  animation: tantraPulse 6s ease-in-out infinite;
+}
+.tantra-aura--2 {
+  width: 400px; height: 400px;
+  right: 25%; bottom: -15%;
+  background: radial-gradient(circle, rgba(201,168,76,0.10) 0%, transparent 70%);
+  animation: tantraPulse 8s ease-in-out infinite reverse;
+}
+@keyframes tantraPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.12); }
+}
+
+/* Gold top/bottom rules */
+.tantra-rule {
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,168,76,0.5) 30%, rgba(201,168,76,0.5) 70%, transparent);
+  z-index: 4;
+}
+.tantra-rule--top { top: 0; }
+.tantra-rule--bottom { bottom: 0; }
+
+/* Left image side */
+.tantra-img-side {
+  position: absolute;
+  top: 0; left: 0;
+  width: 52%;
+  height: 100%;
+  z-index: 2;
+}
+.tantra-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: brightness(0.88) saturate(1.1) contrast(1.05);
+}
+.tantra-img-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to left,
+    #070a12 0%,
+    rgba(7,10,18,0.75) 35%,
+    rgba(60,20,70,0.15) 70%,
+    transparent 100%
+  );
+}
+
+/* Yantra SVG over image */
+.tantra-yantra {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  pointer-events: none;
+  animation: spin 90s linear infinite;
+  z-index: 3;
+}
+
+/* Right content side */
+.tantra-content-side {
+  position: relative;
+  z-index: 3;
+  width: 52%;
+  margin-left: auto;
+  padding: 7rem 8% 7rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid rgba(201,168,76,0.1);
+}
+
+/* Top/bottom ornament */
+.tantra-ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.tantra-orn-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,168,76,0.45));
+  max-width: 80px;
+}
+.tantra-orn-diamond {
+  color: var(--gold);
+  font-size: 0.6rem;
+  opacity: 0.8;
+}
+
+.tantra-heading {
+  font-size: clamp(2.4rem, 5vw, 3.6rem) !important;
+  text-shadow: 0 0 40px rgba(120,40,140,0.4), 0 2px 20px rgba(0,0,0,0.6);
+}
+.tantra-full-desc {
+  font-size: 0.98rem;
+  color: rgba(245,240,232,0.8);
+  line-height: 1.95;
+  max-width: 480px;
+  margin: 0 0 2rem;
+}
+.tantra-badges--full {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+.tantra-cta {
+  width: auto;
+  align-self: flex-start;
+  padding: 0.9rem 2.8rem;
+  font-size: 0.78rem;
+  box-shadow: 0 0 24px rgba(201,168,76,0.2);
+}
+
+@media (max-width: 768px) {
+  .tantra-section-full { flex-direction: column; min-height: unset; }
+  .tantra-img-side { position: relative; width: 100%; height: 360px; }
+  .tantra-img-fade { background: linear-gradient(to bottom, transparent 40%, #070a12 100%); }
+  .tantra-content-side { width: 100%; padding: 3rem 1.5rem 4rem; border-left: none; }
+  .tantra-badges--full { justify-content: flex-start; }
+  .tantra-cta { align-self: flex-start; }
+  .tantra-aura--1, .tantra-aura--2 { display: none; }
+}
+
 /* CLASSES SECTION */
 .classes-section {
   padding: 7rem 0;
@@ -1155,14 +1308,16 @@ footer {
 
 .classes-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .class-card {
-  background: rgba(245,240,232,0.02);
-  border: 1px solid rgba(201,168,76,0.15);
-  padding: 2rem 1.6rem 1.8rem;
+  background: rgba(245,240,232,0.03);
+  border: 1px solid rgba(201,168,76,0.18);
+  padding: 2.4rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -1353,7 +1508,7 @@ footer {
 }
 
 @media (max-width: 900px) {
-  .classes-grid { grid-template-columns: repeat(2, 1fr); }
+  .classes-grid { grid-template-columns: 1fr; max-width: 480px; }
 }
 @media (max-width: 480px) {
   .classes-grid { grid-template-columns: 1fr; }
@@ -1733,7 +1888,7 @@ nav button.nav-link:hover::after { width: 100%; left: 0; }
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-16px); }
 }
-.vastu-reel-phone { animation: reelFloat 5s ease-in-out infinite; }
+.vastu-reel-phone { animation: none; }
 
 /* --- Tantra card ambient aura --- */
 @keyframes tantraAura {

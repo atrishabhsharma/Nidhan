@@ -685,19 +685,16 @@ function Vastu() {
           {/* Right — Reel-style video placeholder */}
           <Reveal className="vastu-right">
             <div className="vastu-reel-wrap">
-              <div className="vastu-reel-label">
-                <InstagramLogo />
-                <span>Reels</span>
-              </div>
               <div className="vastu-reel-phone">
                 <div className="vastu-reel-screen">
-                  {/* Drop your Instagram reel video src here */}
-                  <div className="vastu-reel-placeholder">
-                    <div className="vastu-reel-play">
-                      <PlayIcon />
-                    </div>
-                    <p className="vastu-reel-hint">Add your Instagram Reel here</p>
-                  </div>
+                  <video
+                    src="/Vastu-offline.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  />
                   <div className="vastu-reel-overlay">
                     <div className="vastu-reel-user">
                       <div className="vastu-reel-avatar">NG</div>
@@ -746,39 +743,34 @@ const testimonialsData = [
 // Classes Section
 const classesData = [
   {
-    subject: 'Tantra',
-    Icon: SparkIcon,
-    desc: 'A sacred Guru–Shishya Parampara. Acharyaji has acquired the rare knowledge of 10 Mahavidya Tantra — passed only one-on-one, as it has been for centuries. The identity of every student remains 100% private.',
-    duration: 'Ongoing · 1-on-1',
-    mode: 'Strictly Private',
-    isTantra: true,
-  },
-  {
     subject: 'Vastu Shastra',
     Icon: TempleIcon,
     desc: 'Master the ancient science of spatial harmony — directions, elements, and energy flow for homes and businesses.',
-    duration: '3 Months',
+    duration: '',
     mode: 'Offline · New Delhi',
     seats: 15,
     filled: 12,
+    cta: '✦ Reserve Your Seat',
   },
   {
     subject: 'Astrology',
     Icon: BirthChartIcon,
     desc: 'A comprehensive journey through Parashari Jyotish — birth charts, dashas, transits, and predictive techniques.',
-    duration: '6 Months',
+    duration: '',
     mode: 'Offline · New Delhi',
     seats: 15,
     filled: 15,
+    cta: '✦ Join the Waitlist',
   },
   {
     subject: 'Numerology',
     Icon: NumbersIcon,
     desc: 'Decode the vibrational language of numbers — names, dates, and life path numbers for self-discovery and guidance.',
-    duration: '1 Month',
+    duration: '',
     mode: 'Offline · New Delhi',
     seats: 20,
     filled: 9,
+    cta: '✦ Claim Your Spot',
   },
 ]
 
@@ -826,7 +818,7 @@ function ClassCard({ data }) {
       <h3 className="class-subject">{data.subject}</h3>
       <p className="class-desc">{data.desc}</p>
       <div className="class-meta">
-        <span><CalendarIcon /> {data.duration}</span>
+        {data.duration && <span><CalendarIcon /> {data.duration}</span>}
         <span><LocationIcon /> {data.mode}</span>
       </div>
       <div className="class-seats-bar">
@@ -840,9 +832,54 @@ function ClassCard({ data }) {
         onClick={() => !isFull && scrollToSection('booking')}
         disabled={isFull}
       >
-        {isFull ? 'Join Waitlist' : '✦ Enrol Now'}
+        {isFull ? '✦ Join the Waitlist' : (data.cta || '✦ Enrol Now')}
       </button>
     </div>
+  )
+}
+
+function TantraSection() {
+  return (
+    <section id="tantra-section" className="tantra-section-full">
+      {/* Top & bottom gold rule */}
+      <div className="tantra-rule tantra-rule--top" />
+      <div className="tantra-rule tantra-rule--bottom" />
+
+      {/* Left — image */}
+      <div className="tantra-img-side">
+        <img src="/Tantra.jpg" alt="Tantra" className="tantra-portrait-img" />
+        <div className="tantra-img-fade" />
+      </div>
+
+      {/* Right — content */}
+      <Reveal className="tantra-content-side">
+        {/* Decorative top ornament */}
+        <div className="tantra-ornament">
+          <span className="tantra-orn-line" /><span className="tantra-orn-diamond">◆</span><span className="tantra-orn-line" />
+        </div>
+        <p className="section-label" style={{ textAlign: 'left', marginTop: '1rem' }}>✦ Guru–Shishya Parampara</p>
+        <h2 className="section-title tantra-heading" style={{ textAlign: 'left' }}>
+          Sacred <em>Tantra</em><br />One-on-One
+        </h2>
+        <div className="gold-divider left" style={{ margin: '1.5rem 0' }} />
+        <div className="tantra-badges tantra-badges--full">
+          <span className="tantra-badge">✦ 10 Mahavidya</span>
+          <span className="tantra-badge">✦ 1-on-1 Only</span>
+          <span className="tantra-badge">✦ 100% Private</span>
+          <span className="tantra-badge">✦ Ongoing</span>
+        </div>
+        <p className="tantra-full-desc">
+          A sacred Guru–Shishya Parampara. Acharyaji has acquired the rare knowledge of 10 Mahavidya Tantra — passed only one-on-one, as it has been for centuries. The identity of every student remains 100% private.
+        </p>
+        <button className="class-enrol-btn class-enrol-btn--tantra tantra-cta" onClick={() => scrollToSection('booking')}>
+          ✦ Seek the Guru's Grace
+        </button>
+        {/* Bottom ornament */}
+        <div className="tantra-ornament" style={{ marginTop: '2rem' }}>
+          <span className="tantra-orn-line" /><span className="tantra-orn-diamond">◆</span><span className="tantra-orn-line" />
+        </div>
+      </Reveal>
+    </section>
   )
 }
 
@@ -980,14 +1017,14 @@ function Booking() {
               <div className="ci-icon"><LocationIcon /></div>
               <div>
                 <div className="ci-label">Location</div>
-                <div className="ci-val">23, Vastu Marg, Hauz Khas, New Delhi — 110016</div>
+                <a className="ci-val ci-val--link" href="https://maps.google.com/?q=206+IInd+Floor,+The+Hans,+14,+KG+Marg,+Barakhamba,+New+Delhi,+Delhi+110001" target="_blank" rel="noopener noreferrer">206 IInd Floor, The Hans, 14, KG Marg, Barakhamba, New Delhi, Delhi 110001</a>
               </div>
             </div>
             <div className="contact-item">
               <div className="ci-icon"><PhoneIcon /></div>
               <div>
                 <div className="ci-label">Phone</div>
-                <div className="ci-val">+91 98100 00000</div>
+                <div className="ci-val">+91 6399 105 666</div>
               </div>
             </div>
             <div className="contact-item">
@@ -998,9 +1035,6 @@ function Booking() {
               </div>
             </div>
 
-            <button className="whatsapp-btn" onClick={() => {}}>
-              <ChatIcon /> Chat on WhatsApp
-            </button>
           </Reveal>
 
           <Reveal>
@@ -1117,7 +1151,7 @@ function WhatsAppToggle() {
         <p>Have a question? Reach out to Acharya directly for a quick response.</p>
         <a
           className="wa-chat-link"
-          href="https://wa.me/919999999999?text=Namaste%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Vedic%20Astrology%20services."
+          href="https://wa.me/916399105666?text=Namaste%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Vedic%20Astrology%20services."
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -1143,6 +1177,7 @@ export default function App() {
       <StatsStrip />
       <About />
       <Vastu />
+      <TantraSection />
       <Classes />
       <Videos />
       <Testimonials />
