@@ -68,7 +68,7 @@ nav {
   line-height: 1;
 }
 .nav-logo-img {
-  height: 48px;
+  height: 44px;
   width: auto;
   object-fit: contain;
   flex-shrink: 0;
@@ -358,9 +358,9 @@ section { position: relative; z-index: 1; }
 }
 .hero-stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -529,12 +529,13 @@ section { position: relative; z-index: 1; }
 }
 
 .testi-card {
-  background: rgba(245,240,232,0.03);
-  border: 1px solid rgba(201,168,76,0.12);
+  background: #111827;
+  border: 1px solid rgba(201,168,76,0.30);
   padding: 2.5rem 2rem;
   position: relative;
   text-align: left;
   transition: border-color 0.3s;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 .testi-card:hover { border-color: rgba(201,168,76,0.35); }
 
@@ -542,7 +543,8 @@ section { position: relative; z-index: 1; }
   color: var(--gold);
   font-size: 0.85rem;
   letter-spacing: 0.1em;
-  margin-bottom: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
 }
 .testi-text {
   font-family: var(--serif);
@@ -550,7 +552,7 @@ section { position: relative; z-index: 1; }
   font-style: italic;
   line-height: 1.75;
   color: var(--white);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 .testi-author {
   font-size: 0.78rem;
@@ -558,7 +560,7 @@ section { position: relative; z-index: 1; }
   text-transform: uppercase;
   color: var(--gold);
 }
-.testi-role { font-size: 0.75rem; color: var(--muted); }
+.testi-role { font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; }
 .quote-mark {
   position: absolute;
   top: 1.5rem; right: 2rem;
@@ -574,7 +576,8 @@ section { position: relative; z-index: 1; }
   display: flex;
   align-items: center;
   gap: 0.9rem;
-  margin-top: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .testi-avatar {
   width: 48px; height: 48px;
@@ -582,6 +585,23 @@ section { position: relative; z-index: 1; }
   object-fit: cover;
   border: 2px solid rgba(201,168,76,0.4);
   flex-shrink: 0;
+}
+
+.videos-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.videos-cta .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.videos-cta .social-svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--navy);
+  margin: 0;
 }
 
 /* TESTIMONIALS GOOGLE CTA */
@@ -1360,6 +1380,9 @@ footer {
   overflow: hidden;
   transition: border-color 0.3s, transform 0.3s;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 .video-card:hover {
   border-color: rgba(201,168,76,0.45);

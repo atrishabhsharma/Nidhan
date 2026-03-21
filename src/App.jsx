@@ -22,7 +22,6 @@ const CalendarIcon  = () => <svg className="icon-svg" viewBox="0 0 24 24" {...L}
 const DocumentIcon  = () => <svg className="icon-svg" viewBox="0 0 24 24" {...L}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
 const HomeIcon      = () => <svg className="icon-svg" viewBox="0 0 24 24" {...L}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
 const PlanetIcon    = () => <svg className="icon-svg" viewBox="0 0 24 24" {...L}><circle cx="12" cy="12" r="4"/><ellipse cx="12" cy="12" rx="10" ry="3.5" transform="rotate(-30 12 12)"/></svg>
-const EyeIcon       = () => <svg className="icon-svg" viewBox="0 0 24 24" {...L}><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
 const HeartIcon     = () => <svg className="icon-svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
 const ShareIcon     = () => <svg className="icon-svg" viewBox="0 0 24 24" {...L}><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
 const BirthChartIcon= () => <svg className="icon-svg" viewBox="0 0 24 24" {...L}><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="22"/><line x1="2" y1="12" x2="9" y2="12"/><line x1="15" y1="12" x2="22" y2="12"/></svg>
@@ -30,7 +29,6 @@ const TempleIcon    = () => <svg className="icon-svg" viewBox="0 0 24 24" {...L}
 const ClockIcon     = () => <svg className="icon-svg" viewBox="0 0 24 24" {...L}><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
 const RingsIcon     = () => <svg className="icon-svg" viewBox="0 0 24 24" {...L}><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg>
 const WrenchIcon    = () => <svg className="icon-svg" viewBox="0 0 24 24" {...L}><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-const ScrollIcon    = () => <svg className="icon-svg" viewBox="0 0 24 24" {...L}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
 const NumbersIcon   = () => <svg className="icon-svg" viewBox="0 0 24 24" {...L}><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>
 const SparkIcon     = () => <svg className="icon-svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2l1.68 8.32L22 12l-8.32 1.68L12 22l-1.68-8.32L2 12l8.32-1.68z"/></svg>
 
@@ -484,10 +482,17 @@ const XLogo = () => (
   </svg>
 )
 
+const LinkedInLogo = () => (
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="social-svg">
+    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+  </svg>
+)
+
 const socialsData = [
-  { platform: 'Instagram', count: '34K+', label: 'Followers', url: 'https://www.instagram.com/nidanguru', Logo: InstagramLogo },
-  { platform: 'Facebook', count: '10K+', label: 'Followers', url: 'https://www.facebook.com/nidanguru', Logo: FacebookLogo },
-  { platform: 'YouTube', count: '28K+', label: 'Subscribers', url: 'https://www.youtube.com/@nidanguru', Logo: YouTubeLogo },
+  { platform: 'Instagram', count: '34K+', label: 'Followers', url: 'https://www.instagram.com/nidanguru?igsh=MXJhcm5ham80NTVxaA%3D%3D&wa_status_inline=true', Logo: InstagramLogo },
+  { platform: 'Facebook', count: '10K+', label: 'Followers', url: 'https://www.facebook.com/@acharyadrvivekpanchtatw/?wa_status_inline=true&ref=2&hr=1&wtsid=rdr_063XAv0kE0Dvtxj4n', Logo: FacebookLogo },
+  { platform: 'YouTube', count: '28K+', label: 'Subscribers', url: 'https://m.youtube.com/@nidanguru', Logo: YouTubeLogo },
+  { platform: 'LinkedIn', count: '1.5K+', label: 'Followers', url: 'https://www.linkedin.com/in/acharya-dr-vivek-panchtatw-4123356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', Logo: LinkedInLogo },
 ]
 
 function StatsStrip() {
@@ -576,27 +581,27 @@ function About() {
 const videosData = [
   {
     id: 'video1',
-    thumb: 'https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg',
-    tag: 'Vedic Astrology',
-    title: 'Understanding Your Birth Chart: A Complete Guide',
-    desc: 'Learn the fundamentals of Janma Kundali and how planetary positions shape your destiny.',
-    views: '125K'
+    thumb: 'https://img.youtube.com/vi/Owul1HlA-ss/maxresdefault.jpg',
+    url: 'https://youtu.be/Owul1HlA-ss',
+    tag: 'Vastu Shastra',
+    title: 'Vastu Dose ~ Best Entry of the Property',
+    desc: 'Discover the most auspicious entry directions for your property and how the right entrance can transform the flow of energy in your home or office.',
   },
   {
     id: 'video2',
-    thumb: 'https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg',
-    tag: 'Vastu Shastra',
-    title: 'Top 10 Vastu Tips for Your Home',
-    desc: 'Simple yet powerful Vastu corrections that can transform the energy of your living space.',
-    views: '89K'
+    thumb: 'https://img.youtube.com/vi/PSmclVas4wE/maxresdefault.jpg',
+    url: 'https://youtu.be/PSmclVas4wE',
+    tag: 'Vedic Astrology',
+    title: 'Learn Astrology in Expert Guidance: Unlock the Secrets of the Stars',
+    desc: 'Acharya Dr Vivek Panchtatw takes you on a journey through Vedic Astrology — decoding planetary wisdom and empowering you to read the language of the cosmos.',
   },
   {
     id: 'video3',
-    thumb: 'https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg',
-    tag: 'Muhurta',
-    title: 'How to Choose the Perfect Wedding Date',
-    desc: 'The ancient science of Muhurta and why timing is everything for auspicious beginnings.',
-    views: '67K'
+    thumb: 'https://img.youtube.com/vi/1SuijLdJ6Co/maxresdefault.jpg',
+    url: 'https://youtu.be/1SuijLdJ6Co',
+    tag: 'Tantra',
+    title: 'Navratri Tantra Sadhana and the 8th House',
+    desc: 'An in-depth exploration of Navratri Tantra Sadhana and the mystical significance of the 8th house in Vedic Astrology — for sincere seekers on the spiritual path.',
   }
 ]
 
@@ -611,7 +616,7 @@ function Videos() {
         </Reveal>
         <StaggeredReveal className="videos-grid">
           {videosData.map(v => (
-            <div className="video-card" key={v.id}>
+            <a className="video-card" key={v.id} href={v.url} target="_blank" rel="noopener noreferrer">
               <div className="video-thumb">
                 <img
                   src={v.thumb}
@@ -621,16 +626,22 @@ function Videos() {
                 <div className="video-play">
                   <div className="play-btn"><PlayIcon /></div>
                 </div>
-                <div className="video-views-badge"><EyeIcon /> {v.views} views</div>
               </div>
               <div className="video-body">
                 <p className="video-tag">{v.tag}</p>
                 <h3 className="video-title">{v.title}</h3>
                 <p className="video-desc">{v.desc}</p>
               </div>
-            </div>
+            </a>
           ))}
         </StaggeredReveal>
+        <Reveal>
+          <div className="videos-cta">
+            <a href="https://m.youtube.com/@nidanguru" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <YouTubeLogo /> View All Videos
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   )
@@ -713,25 +724,22 @@ function Vastu() {
 // Testimonials
 const testimonialsData = [
   {
-    text: "Acharyaji's birth chart reading was uncannily accurate. He identified a karmic pattern I had been struggling with for years and offered a remedy that genuinely shifted things within three months.",
-    name: 'Priya Mehta',
-    role: 'Entrepreneur, Mumbai',
-    img: 'https://randomuser.me/api/portraits/women/44.jpg',
-    fallback: 'PM'
+    text: "Dr Vivek, author of the insightful \"Life In Glimpse\", is such a warm and calming person. Always inspiring, and a wonderful treasure to spend time with. Thank you!",
+    name: 'Geoffrey Pierson',
+    role: 'Director, London',
+    fallback: 'GP'
   },
   {
-    text: 'We were facing constant disputes at our office. After the Vastu audit, simple rearrangements transformed the atmosphere completely. Our revenue has grown 40% since then.',
-    name: 'Rahul Sinha',
-    role: 'Director, Delhi NCR',
-    img: 'https://randomuser.me/api/portraits/men/32.jpg',
-    fallback: 'RS'
+    text: "I had lost my gold bangle in Kuala Lumpur, where we live, and searched everywhere but couldn't find it. I then sought help from Acharya Ji, who was in India at the time. He guided me and asked me to check certain places — and miraculously, I found my gold bangle in the exact spot he had mentioned.",
+    name: 'Neha Srivastava',
+    role: 'Restaurant Owner, Malaysia',
+    fallback: 'NS'
   },
   {
-    text: "The Muhurta consultation for our wedding was perfection. Acharyaji selected a time we initially thought was impossible given our constraints — and it turned out beautifully auspicious.",
-    name: 'Ananya & Vikram Rao',
-    role: 'Bangalore',
-    img: 'https://randomuser.me/api/portraits/women/68.jpg',
-    fallback: 'AV'
+    text: "I had a truly transformative experience with Acharya Dr Vivek Panchtatw's Astro Vastu consultation. His deep knowledge, precise guidance, and practical remedies brought clarity and positive changes in my life. Highly recommended for anyone seeking authentic and effective solutions — and especially for my property in Tokyo, Japan, where I have witnessed his pure and authentic divine powers.",
+    name: 'Sanjay Kaushik',
+    role: 'Software Engineer, Japan',
+    fallback: 'SK'
   }
 ]
 
@@ -871,12 +879,9 @@ function Testimonials() {
         <StaggeredReveal className="testi-grid">
           {testimonialsData.map((t, i) => (
             <div className="testi-card" key={i}>
-              <div className="quote-mark">&ldquo;</div>
-              <div className="testi-stars">★★★★★</div>
-              <p className="testi-text">{t.text}</p>
               <div className="testi-reviewer">
                 <img
-                  src={t.img}
+                  src={t.img || `https://placehold.co/48x48/111827/c9a84c?text=${t.fallback}`}
                   alt={t.name}
                   className="testi-avatar"
                   onError={(e) => { e.target.src = `https://placehold.co/48x48/111827/c9a84c?text=${t.fallback}` }}
@@ -886,6 +891,9 @@ function Testimonials() {
                   <p className="testi-role">{t.role}</p>
                 </div>
               </div>
+              <div className="testi-stars">★★★★★</div>
+              <div className="quote-mark">&ldquo;</div>
+              <p className="testi-text">{t.text}</p>
             </div>
           ))}
         </StaggeredReveal>
@@ -915,12 +923,12 @@ function Testimonials() {
 
 // Services
 const servicesData = [
-  { Icon: BirthChartIcon, title: 'Birth Chart Analysis',        desc: "A comprehensive reading of your Janma Kundali revealing personality, karmic patterns, and life's grand design through the lens of Vedic astrology.", link: 'Consult Now →' },
-  { Icon: TempleIcon,     title: 'Vastu Audit',                 desc: 'On-site or remote evaluation of your home or office to harmonize spatial energies, attract abundance, and eliminate invisible obstacles.',        link: 'Schedule Audit →' },
-  { Icon: ClockIcon,      title: 'Muhurta — Auspicious Timing', desc: 'Select the most fortuitous moment for weddings, business launches, property registration, or any significant life event.',                         link: 'Find Your Time →' },
-  { Icon: RingsIcon,      title: 'Relationship Compatibility',  desc: 'Kundali Milan and Guna matching to understand the cosmic bond between two souls—ideal for marriage and partnerships.',                              link: 'Check Compatibility →' },
-  { Icon: WrenchIcon,     title: 'Vastu Remedies',              desc: 'Practical, non-demolition solutions using yantras, mirrors, colours, and elemental placements to correct existing spatial imbalances.',              link: 'Get Remedies →' },
-  { Icon: ScrollIcon,     title: 'Annual Forecast Report',      desc: 'A detailed written Varshaphal report covering key planetary transits, dasha periods, and personalised guidance for the year ahead.',                link: 'Order Report →' },
+  { Icon: TempleIcon,     title: 'Vastu Audit',                 desc: 'On-site or remote evaluation of your home or office to harmonise spatial energies, attract abundance, and eliminate invisible obstacles.',           link: 'Schedule Audit →' },
+  { Icon: BirthChartIcon, title: 'Astrology',                   desc: "A deep Vedic reading of your Janma Kundali — uncovering personality, karmic patterns, dasha cycles, and the grand design of your life's journey.",  link: 'Consult Now →' },
+  { Icon: SparkIcon,      title: 'Tantra',                      desc: 'Sacred Tantric guidance rooted in authentic Guru–Shishya Parampara. Acharya Ji holds rare knowledge of 10 Mahavidyas — offered with full discretion.', link: 'Enquire Privately →' },
+  { Icon: RingsIcon,      title: 'Relationship Compatibility',  desc: 'Kundali Milan and Guna matching to understand the cosmic bond between two souls — ideal for marriage decisions and life partnerships.',               link: 'Check Compatibility →' },
+  { Icon: ClockIcon,      title: 'Muhurta — Auspicious Timing', desc: 'Select the most fortuitous moment for weddings, business launches, property registration, or any significant life event.',                           link: 'Find Your Time →' },
+  { Icon: WrenchIcon,     title: 'Vastu Remedies',              desc: 'Practical, non-demolition solutions using yantras, mirrors, colours, and elemental placements to correct existing spatial imbalances.',               link: 'Get Remedies →' },
 ]
 
 function Services() {
@@ -1071,9 +1079,10 @@ function Footer() {
           <img src="/Logo.png" alt="NidanGuru" className="footer-logo-img" />
         </div>
         <div className="footer-social">
-          <a className="soc" href="https://www.instagram.com/nidanguru" target="_blank" rel="noopener noreferrer" title="Instagram"><InstagramLogo /></a>
-          <a className="soc" href="https://www.facebook.com/nidanguru" target="_blank" rel="noopener noreferrer" title="Facebook"><FacebookLogo /></a>
-          <a className="soc" href="https://www.youtube.com/@nidanguru" target="_blank" rel="noopener noreferrer" title="YouTube"><YouTubeLogo /></a>
+          <a className="soc" href="https://www.instagram.com/nidanguru?igsh=MXJhcm5ham80NTVxaA%3D%3D&wa_status_inline=true" target="_blank" rel="noopener noreferrer" title="Instagram"><InstagramLogo /></a>
+          <a className="soc" href="https://www.facebook.com/@acharyadrvivekpanchtatw/?wa_status_inline=true&ref=2&hr=1&wtsid=rdr_063XAv0kE0Dvtxj4n" target="_blank" rel="noopener noreferrer" title="Facebook"><FacebookLogo /></a>
+          <a className="soc" href="https://m.youtube.com/@nidanguru" target="_blank" rel="noopener noreferrer" title="YouTube"><YouTubeLogo /></a>
+          <a className="soc" href="https://www.linkedin.com/in/acharya-dr-vivek-panchtatw-4123356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" title="LinkedIn"><LinkedInLogo /></a>
         </div>
         <div className="footer-links">
           {links.map(l => (
