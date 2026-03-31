@@ -548,7 +548,7 @@ function About() {
                 </div>
               </div>
               <button className="btn-primary" style={{ marginTop: '2.5rem' }} onClick={() => scrollToSection('booking')}>
-                Book with Acharyaji
+                Book with NidanGuru
               </button>
             </div>
           </Reveal>
